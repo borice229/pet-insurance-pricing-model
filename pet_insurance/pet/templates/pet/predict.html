@@ -1,0 +1,99 @@
+{% comment %} <h2>Simulation assurance chien 🐶</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Calculer</button>
+</form>
+
+{% if result %}
+<hr>
+<h3>Résultat</h3>
+<p>Fréquence soins : {{ result.freq }}</p>
+<p>Coût moyen : {{ result.cost }} €</p>
+<p><strong>Prime estimée : {{ result.prime_estimee }} €</strong></p>
+{% endif %} {% endcomment %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulation – 12 BOBOASSUR</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: #0d6efd;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #084298;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #eef4ff;
+            border-left: 5px solid #0d6efd;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Simulation d’assurance canine</h1>
+
+    <p>
+        Ce simulateur estime la fréquence des soins, le coût moyen annuel
+        et la prime d’assurance associée à votre chien.
+    </p>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Lancer la simulation</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        <h2>Résultats de la simulation</h2>
+        <p>Fréquence estimée des soins : <strong>{{ result.freq }}</strong></p>
+        <p>Coût moyen estimé : <strong>{{ result.cost }} €</strong></p>
+        <p>Prime annuelle estimée :
+            <strong>{{ result.prime_estimee }} €</strong>
+        </p>
+    </div>
+    {% endif %}
+
+</div>
+</body>
+</html>
