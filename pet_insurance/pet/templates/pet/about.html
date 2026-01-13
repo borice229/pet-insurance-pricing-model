@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>À propos – 12 BOBOASSUR</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+        }
+
+        header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header img {
+            max-height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: #0d6efd;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        a {
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin: 40px 0;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="{% static 'pet/images/insurance_bobo.png' %}" alt="12 BOBOASSUR">
+    <h1>À propos</h1>
+    <p>Projet 12 BOBOASSUR – Assurance canine intelligente</p>
+</header>
+
+<div class="container">
+
+    <h2>Borice Dossou</h2>
+    <p>
+        <strong>Data Analyst | Data Engineer | Statisticien</strong><br>
+        Azure · Power BI · SQL · Talend
+    </p>
+
+    <p>
+        Je suis actuellement en formation en <strong>Big Data, Data Science et Analyse des Risques sous Python</strong>
+        à l’Université de Montpellier, et titulaire d’un <strong>Master en Mathématiques Appliquées – Statistique,
+        option Science des Données</strong> obtenu à l’Université Bretagne Sud.
+    </p>
+
+    <p>
+        Mon parcours académique m’a permis de développer de solides compétences en
+        analyse statistique, modélisation prédictive et ingénierie des données.
+    </p>
+
+    <h2>Le projet 12 BOBOASSUR</h2>
+
+    <p>
+        Ce projet a pour objectif de proposer une estimation automatisée de la prime
+        d’assurance santé pour chiens, à partir de modèles statistiques utilisés en assurance.
+    </p>
+
+    <ul>
+        <li>Modèle de fréquence des soins : loi de Poisson</li>
+        <li>Modèle de coût moyen : loi Gamma</li>
+        <li>Application web Django déployée en production</li>
+    </ul>
+
+    <p>
+        Il illustre une approche complète allant de l’analyse de données
+        jusqu’à la mise en production d’un modèle de data science.
+    </p>
+
+    <h2>Liens</h2>
+    <p>
+        🔗 LinkedIn :
+        <a href="https://www.linkedin.com/in/boricedossou/" target="_blank">
+            linkedin.com/in/boricedossou
+        </a>
+    </p>
+
+    <p>
+        🔗 GitHub :
+        <a href="https://github.com/borice229" target="_blank">
+            github.com/borice229
+        </a>
+    </p>
+
+    <p>
+        <a href="/">← Retour à l’accueil</a>
+    </p>
+
+</div>
+
+<footer>
+    © 2026 – 12 BOBOASSUR
+</footer>
+
+</body>
+</html>

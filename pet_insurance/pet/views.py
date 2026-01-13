@@ -50,3 +50,6 @@ def predict_insurance(request):
         "form": form,
         "result": result
     })
+
+def about(request):
+    return render(request, "pet/about.html")
